@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://localhost:8080/home/pub/0/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <title>llr for significance testing ab test subgroups -- Sage</title>
+        
+	
+<link rel="alternate" type="application/sage" title="llr for significance testing ab test subgroups" href="http://localhost:8080/home/pub/0/download/llr%20for%20significance%20testing%20ab%20test%20subgroups.sws">
+
+        
+        <link type="text/css" rel="stylesheet" href="./llr for significance testing ab test subgroups -- Sage_files/main.css">
+        
+        
+        <script type="text/javascript" src="./llr for significance testing ab test subgroups -- Sage_files/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="./llr for significance testing ab test subgroups -- Sage_files/localization.js"></script>
+        <script type="text/javascript" src="./llr for significance testing ab test subgroups -- Sage_files/json2.min.js"></script>
+        
+
+<!-- jQuery UI - interacts, widgets, drag-drop, etc. -->
+<link rel="stylesheet" href="http://localhost:8080/javascript/jqueryui/css/sage/jquery-ui-1.8.11.custom.css">
+<script type="text/javascript" src="./llr for significance testing ab test subgroups -- Sage_files/jquery-ui-1.8.11.custom.min.js"></script>
+
+<!-- jQuery plugins - color pickers, shift-click, AJAX forms, IE fixes, notifications -->
+<link rel="stylesheet" href="./llr for significance testing ab test subgroups -- Sage_files/farbtastic.css" type="text/css">
+<script type="text/javascript" src="./llr for significance testing ab test subgroups -- Sage_files/farbtastic.min.js"></script>
+<script type="text/javascript" src="./llr for significance testing ab test subgroups -- Sage_files/jquery.event.extendedclick.min.js"></script>
+<script type="text/javascript" src="./llr for significance testing ab test subgroups -- Sage_files/jquery.form.min.js"></script>
+<script type="text/javascript" src="./llr for significance testing ab test subgroups -- Sage_files/jquery.bgiframe.min.js"></script>
+<link rel="stylesheet" href="./llr for significance testing ab test subgroups -- Sage_files/jPicker-1.1.6.min.css" type="text/css">
+<script type="text/javascript" src="./llr for significance testing ab test subgroups -- Sage_files/jpicker-1.1.6.min.js"></script>
+<link rel="stylesheet" media="screen" type="text/css" href="./llr for significance testing ab test subgroups -- Sage_files/colorpicker.css">
+<script type="text/javascript" src="./llr for significance testing ab test subgroups -- Sage_files/colorpicker.min.js"></script>
+<script type="text/javascript" src="./llr for significance testing ab test subgroups -- Sage_files/ui.achtung-mod.min.js"></script>
+
+
+<script type="text/javascript" src="./llr for significance testing ab test subgroups -- Sage_files/jmol_lib.js"></script>
+
+
+
+<script type="text/javascript" src="./llr for significance testing ab test subgroups -- Sage_files/MathJax.js"></script>
+
+
+<!-- Sage3d - accelerated 3D graphics -->
+<script type="text/javascript" src="./llr for significance testing ab test subgroups -- Sage_files/sage3d.js"></script>
+
+<!-- Jmol - embedded 3D graphics -->
+<script type="text/javascript" src="./llr for significance testing ab test subgroups -- Sage_files/Jmol.js"></script>
+<!-- This must stay in head -->
+<script>jmolInitialize("/java/jmol");jmolSetCallback("menuFile","/java/jmol/appletweb/SageMenu.mnu");</script>
+
+
+
+<script type="text/javascript">user_name= "admin";</script>
+
+<script type="text/javascript">
+    worksheet_filename = "pub/0";
+    worksheet_name = 'llr for significance testing ab test subgroups';
+    
+</script>
+
+
+
+<script src="./llr for significance testing ab test subgroups -- Sage_files/published_worksheet.js"></script>
+
+        
+        
+        
+        <script type="text/javascript" src="./llr for significance testing ab test subgroups -- Sage_files/master.js"></script>
+    <style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+.MathJax .mo, .MathJax .mi {color: inherit ! important}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; border: 0; padding: 0; margin: 0}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0 !important; padding: 0 !important; margin: 0 !important; vertical-align: 0 !important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap ! important}
+.MathJax img {display: inline ! important; float: none ! important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block; overflow: hidden; width: 1px; height: 60ex}
+.MathJax .MathJax_EmBox {display: block; overflow: hidden; width: 1px; height: 60em}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Main; src: url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff') format('woff'), url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Main; src: url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff') format('woff'), url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf') format('opentype'); font-weight: bold}
+@font-face {font-family: MathJax_Main; src: url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff') format('woff'), url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf') format('opentype'); font-style: italic}
+@font-face {font-family: MathJax_Math; src: url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff') format('woff'), url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf') format('opentype'); font-style: italic}
+@font-face {font-family: MathJax_Caligraphic; src: url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff') format('woff'), url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size1; src: url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff') format('woff'), url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size2; src: url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff') format('woff'), url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size3; src: url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff') format('woff'), url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size4; src: url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff') format('woff'), url('http://localhost:8080/javascript/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf') format('opentype')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+    <body id="guest-worksheet-page" class="" data-feedly-mini="yes"><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div id="MathJax_Message" style="display: none;"></div>
+        
+<ul class="controls">
+    <li><a href="http://localhost:8080/home/admin/2/">Edit this.</a></li>
+    <li><a href="http://localhost:8080/home/pub/0/download/llr%20for%20significance%20testing%20ab%20test%20subgroups.sws">Download.</a></li>
+    
+    <li><a href="http://localhost:8080/pub/">Other published documents...</a></li>
+</ul>
+<hr class="usercontrol">
+<h1 class="title">llr for significance testing ab test subgroups</h1>
+<h2 class="lastedit">
+<span class="lastedit">1 second ago by admin</span></h2>
+
+
+
+
+
+<div class="cell_input_active" id="cell_resizer"></div>
+<div class="worksheet_cell_list" id="worksheet_cell_list">
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_1" class="cell_visible">
+    <div id="cell_1" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">var('x1', 'impact', 'n1', 'b1', 'n2', 'b2')
+#impact is the impact of global the conversion rate by going from A to B
+#x1 is the ln-odds of conversion in A in this segment that maximizes the liklihood and satisfies x2 = x1 + impact
+#x2 is similar to x1 except for in B
+#n1 number of conversions in this segment in A
+#n2 number of conversions in this segment in B
+#b1 number of non-conversions in this segment in A
+#b2 number of non-conversions in this segment in B
+
+#sagepy needs help so substituting by expx1 = e^x1 by hand
+var('expx1')
+expx2 = exp(log(expx1) + impact)
+p1 = expx1 / (1 + expx1)
+p2 = expx2 / (1 + expx2)
+ll1 = n1*log(p1) + (b1)*log(1 - p1)
+ll2 = n2*log(p2) + (b2)*log(1 - p2)
+ll1 + ll2&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_1" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_1" onclick="cycle_cell_output_type(1);">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_1">
+                            <div class="cell_output_wrap" id="cell_output_1">
+                                
+                                    <pre class="shrunk">n1*log(expx1/(expx1 + 1)) + b1*log(-expx1/(expx1 + 1) + 1) +
+n2*log(e^(impact + log(expx1))/(e^(impact + log(expx1)) + 1)) +
+b2*log(-e^(impact + log(expx1))/(e^(impact + log(expx1)) + 1) + 1)</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_nowrap_wrap" id="cell_output_nowrap_1">
+                                    <pre class="shrunk">n1*log(expx1/(expx1 + 1)) + b1*log(-expx1/(expx1 + 1) + 1) + n2*log(e^(impact + log(expx1))/(e^(impact + log(expx1)) + 1)) + b2*log(-e^(impact + log(expx1))/(e^(impact + log(expx1)) + 1) + 1)</pre>
+                                </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_1">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_2" class="cell_visible">
+    <div id="cell_2" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">d = derivative(ll1 + ll2, expx1)*expx1 # chain rule
+d&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_2" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_2" onclick="cycle_cell_output_type(2);">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_2">
+                            <div class="cell_output_wrap" id="cell_output_2">
+                                
+                                    <pre class="shrunk">(n2*(e^(impact + log(expx1))/(expx1*(e^(impact + log(expx1)) + 1)) -
+e^(2*impact + 2*log(expx1))/(expx1*(e^(impact + log(expx1)) +
+1)^2))*(e^(impact + log(expx1)) + 1)*e^(-impact - log(expx1)) + (expx1 +
+1)*n1*(1/(expx1 + 1) - expx1/(expx1 + 1)^2)/expx1 + b1*(1/(expx1 + 1) -
+expx1/(expx1 + 1)^2)/(expx1/(expx1 + 1) - 1) + b2*(e^(impact +
+log(expx1))/(expx1*(e^(impact + log(expx1)) + 1)) - e^(2*impact +
+2*log(expx1))/(expx1*(e^(impact + log(expx1)) + 1)^2))/(e^(impact +
+log(expx1))/(e^(impact + log(expx1)) + 1) - 1))*expx1</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_nowrap_wrap" id="cell_output_nowrap_2">
+                                    <pre class="shrunk">(n2*(e^(impact + log(expx1))/(expx1*(e^(impact + log(expx1)) + 1)) - e^(2*impact + 2*log(expx1))/(expx1*(e^(impact + log(expx1)) + 1)^2))*(e^(impact + log(expx1)) + 1)*e^(-impact - log(expx1)) + (expx1 + 1)*n1*(1/(expx1 + 1) - expx1/(expx1 + 1)^2)/expx1 + b1*(1/(expx1 + 1) - expx1/(expx1 + 1)^2)/(expx1/(expx1 + 1) - 1) + b2*(e^(impact + log(expx1))/(expx1*(e^(impact + log(expx1)) + 1)) - e^(2*impact + 2*log(expx1))/(expx1*(e^(impact + log(expx1)) + 1)^2))/(e^(impact + log(expx1))/(e^(impact + log(expx1)) + 1) - 1))*expx1</pre>
+                                </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_2">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_3" class="cell_visible">
+    <div id="cell_3" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">f = solve(d, expx1)
+f&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_3" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_3" onclick="cycle_cell_output_type(3);">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_3">
+                            <div class="cell_output_wrap" id="cell_output_3">
+                                
+                                    <pre class="shrunk">[expx1 == -1/2*(b2*e^impact - n1*e^impact + b1 - n2 +
+sqrt(b2^2*e^(2*impact) + n1^2*e^(2*impact) + 2*b1*b2*e^impact + b1^2 -
+2*(b2*e^(2*impact) - (b1 + 2*b2)*e^impact)*n1 + 2*((2*b1 + b2)*e^impact
++ n1*e^impact - b1)*n2 + n2^2))*e^(-impact)/(b1 + b2), expx1 ==
+-1/2*(b2*e^impact - n1*e^impact + b1 - n2 - sqrt(b2^2*e^(2*impact) +
+n1^2*e^(2*impact) + 2*b1*b2*e^impact + b1^2 - 2*(b2*e^(2*impact) - (b1 +
+2*b2)*e^impact)*n1 + 2*((2*b1 + b2)*e^impact + n1*e^impact - b1)*n2 +
+n2^2))*e^(-impact)/(b1 + b2)]</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_nowrap_wrap" id="cell_output_nowrap_3">
+                                    <pre class="shrunk">[expx1 == -1/2*(b2*e^impact - n1*e^impact + b1 - n2 + sqrt(b2^2*e^(2*impact) + n1^2*e^(2*impact) + 2*b1*b2*e^impact + b1^2 - 2*(b2*e^(2*impact) - (b1 + 2*b2)*e^impact)*n1 + 2*((2*b1 + b2)*e^impact + n1*e^impact - b1)*n2 + n2^2))*e^(-impact)/(b1 + b2), expx1 == -1/2*(b2*e^impact - n1*e^impact + b1 - n2 - sqrt(b2^2*e^(2*impact) + n1^2*e^(2*impact) + 2*b1*b2*e^impact + b1^2 - 2*(b2*e^(2*impact) - (b1 + 2*b2)*e^impact)*n1 + 2*((2*b1 + b2)*e^impact + n1*e^impact - b1)*n2 + n2^2))*e^(-impact)/(b1 + b2)]</pre>
+                                </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_3">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_4" class="cell_visible">
+    <div id="cell_4" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">g(expx1) = ll1 + ll2
+h(n1, b1, n2, b2, impact) = g(f[1].right())
+simplify(h(n1, b1, n2, b2, impact))&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_4" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_4" onclick="cycle_cell_output_type(4);">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_4">
+                            <div class="cell_output_wrap" id="cell_output_4">
+                                
+                                    <pre class="shrunk">n1*log((b2*e^impact - n1*e^impact + b1 - n2 - sqrt(b2^2*e^(2*impact) +
+n1^2*e^(2*impact) + 2*b1*b2*e^impact + b1^2 - 2*(b2*e^(2*impact) - (b1 +
+2*b2)*e^impact)*n1 + 2*((2*b1 + b2)*e^impact + n1*e^impact - b1)*n2 +
+n2^2))*e^(-impact)/((b1 + b2)*((b2*e^impact - n1*e^impact + b1 - n2 -
+sqrt(b2^2*e^(2*impact) + n1^2*e^(2*impact) + 2*b1*b2*e^impact + b1^2 -
+2*(b2*e^(2*impact) - (b1 + 2*b2)*e^impact)*n1 + 2*((2*b1 + b2)*e^impact
++ n1*e^impact - b1)*n2 + n2^2))*e^(-impact)/(b1 + b2) - 2))) +
+b1*log(-(b2*e^impact - n1*e^impact + b1 - n2 - sqrt(b2^2*e^(2*impact) +
+n1^2*e^(2*impact) + 2*b1*b2*e^impact + b1^2 - 2*(b2*e^(2*impact) - (b1 +
+2*b2)*e^impact)*n1 + 2*((2*b1 + b2)*e^impact + n1*e^impact - b1)*n2 +
+n2^2))*e^(-impact)/((b1 + b2)*((b2*e^impact - n1*e^impact + b1 - n2 -
+sqrt(b2^2*e^(2*impact) + n1^2*e^(2*impact) + 2*b1*b2*e^impact + b1^2 -
+2*(b2*e^(2*impact) - (b1 + 2*b2)*e^impact)*n1 + 2*((2*b1 + b2)*e^impact
++ n1*e^impact - b1)*n2 + n2^2))*e^(-impact)/(b1 + b2) - 2)) + 1) +
+n2*log((b2*e^impact - n1*e^impact + b1 - n2 - sqrt(b2^2*e^(2*impact) +
+n1^2*e^(2*impact) + 2*b1*b2*e^impact + b1^2 - 2*(b2*e^(2*impact) - (b1 +
+2*b2)*e^impact)*n1 + 2*((2*b1 + b2)*e^impact + n1*e^impact - b1)*n2 +
+n2^2))/((b1 + b2)*((b2*e^impact - n1*e^impact + b1 - n2 -
+sqrt(b2^2*e^(2*impact) + n1^2*e^(2*impact) + 2*b1*b2*e^impact + b1^2 -
+2*(b2*e^(2*impact) - (b1 + 2*b2)*e^impact)*n1 + 2*((2*b1 + b2)*e^impact
++ n1*e^impact - b1)*n2 + n2^2))/(b1 + b2) - 2))) + b2*log(-(b2*e^impact
+- n1*e^impact + b1 - n2 - sqrt(b2^2*e^(2*impact) + n1^2*e^(2*impact) +
+2*b1*b2*e^impact + b1^2 - 2*(b2*e^(2*impact) - (b1 + 2*b2)*e^impact)*n1
++ 2*((2*b1 + b2)*e^impact + n1*e^impact - b1)*n2 + n2^2))/((b1 +
+b2)*((b2*e^impact - n1*e^impact + b1 - n2 - sqrt(b2^2*e^(2*impact) +
+n1^2*e^(2*impact) + 2*b1*b2*e^impact + b1^2 - 2*(b2*e^(2*impact) - (b1 +
+2*b2)*e^impact)*n1 + 2*((2*b1 + b2)*e^impact + n1*e^impact - b1)*n2 +
+n2^2))/(b1 + b2) - 2)) + 1)</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_nowrap_wrap" id="cell_output_nowrap_4">
+                                    <pre class="shrunk">n1*log((b2*e^impact - n1*e^impact + b1 - n2 - sqrt(b2^2*e^(2*impact) + n1^2*e^(2*impact) + 2*b1*b2*e^impact + b1^2 - 2*(b2*e^(2*impact) - (b1 + 2*b2)*e^impact)*n1 + 2*((2*b1 + b2)*e^impact + n1*e^impact - b1)*n2 + n2^2))*e^(-impact)/((b1 + b2)*((b2*e^impact - n1*e^impact + b1 - n2 - sqrt(b2^2*e^(2*impact) + n1^2*e^(2*impact) + 2*b1*b2*e^impact + b1^2 - 2*(b2*e^(2*impact) - (b1 + 2*b2)*e^impact)*n1 + 2*((2*b1 + b2)*e^impact + n1*e^impact - b1)*n2 + n2^2))*e^(-impact)/(b1 + b2) - 2))) + b1*log(-(b2*e^impact - n1*e^impact + b1 - n2 - sqrt(b2^2*e^(2*impact) + n1^2*e^(2*impact) + 2*b1*b2*e^impact + b1^2 - 2*(b2*e^(2*impact) - (b1 + 2*b2)*e^impact)*n1 + 2*((2*b1 + b2)*e^impact + n1*e^impact - b1)*n2 + n2^2))*e^(-impact)/((b1 + b2)*((b2*e^impact - n1*e^impact + b1 - n2 - sqrt(b2^2*e^(2*impact) + n1^2*e^(2*impact) + 2*b1*b2*e^impact + b1^2 - 2*(b2*e^(2*impact) - (b1 + 2*b2)*e^impact)*n1 + 2*((2*b1 + b2)*e^impact + n1*e^impact - b1)*n2 + n2^2))*e^(-impact)/(b1 + b2) - 2)) + 1) + n2*log((b2*e^impact - n1*e^impact + b1 - n2 - sqrt(b2^2*e^(2*impact) + n1^2*e^(2*impact) + 2*b1*b2*e^impact + b1^2 - 2*(b2*e^(2*impact) - (b1 + 2*b2)*e^impact)*n1 + 2*((2*b1 + b2)*e^impact + n1*e^impact - b1)*n2 + n2^2))/((b1 + b2)*((b2*e^impact - n1*e^impact + b1 - n2 - sqrt(b2^2*e^(2*impact) + n1^2*e^(2*impact) + 2*b1*b2*e^impact + b1^2 - 2*(b2*e^(2*impact) - (b1 + 2*b2)*e^impact)*n1 + 2*((2*b1 + b2)*e^impact + n1*e^impact - b1)*n2 + n2^2))/(b1 + b2) - 2))) + b2*log(-(b2*e^impact - n1*e^impact + b1 - n2 - sqrt(b2^2*e^(2*impact) + n1^2*e^(2*impact) + 2*b1*b2*e^impact + b1^2 - 2*(b2*e^(2*impact) - (b1 + 2*b2)*e^impact)*n1 + 2*((2*b1 + b2)*e^impact + n1*e^impact - b1)*n2 + n2^2))/((b1 + b2)*((b2*e^impact - n1*e^impact + b1 - n2 - sqrt(b2^2*e^(2*impact) + n1^2*e^(2*impact) + 2*b1*b2*e^impact + b1^2 - 2*(b2*e^(2*impact) - (b1 + 2*b2)*e^impact)*n1 + 2*((2*b1 + b2)*e^impact + n1*e^impact - b1)*n2 + n2^2))/(b1 + b2) - 2)) + 1)</pre>
+                                </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_4">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_5" class="cell_visible">
+    <div id="cell_5" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">def ll(n, b):
+    p = n / (n + b)
+    return n*log(p) + b*log(1 - p)
+    
+def signif_for_2_way_split(n1a, b1a, n1b, b1b, n2a, b2a, n2b, b2b):
+    t1 = n1a + b1a + n1b + b1b
+    t2 = n2a + b2a + n2b + b2b
+    p1a = n1a / (n1a + b1a)
+    p1b = n1b / (n1b + b1b)
+    p2a = n2a / (n2a + b2a)
+    p2b = n2b / (n2b + b2b)
+    
+    pa = (p1a * t1 + p2a * t2) / (t1 + t2)
+    pb = (p1b * t1 + p2b * t2) / (t1 + t2)
+    
+    x = ((log(p1b) - log(1 - p1b) - (log(p1a) - log(1 - p1a)))*t1 +
+        (log(p2b) - log(1 - p2b) - (log(p2a) - log(1 - p2a)))*t2) / (t1 + t2)
+    return (
+        ll(n1a, b1a) +
+        ll(n1b, b1b) -
+        h(n1a, b1a, n1b, b1b, x) +
+        ll(n2a, b2a)+
+        ll(n2b, b2b) -
+        h(n2a, b2a, n2b, b2b, x)
+        )&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_5" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_5" onclick="cycle_cell_output_type(5);">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_5">
+                            <div class="cell_output_wrap" id="cell_output_5">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_nowrap_wrap" id="cell_output_nowrap_5">
+                                    
+                                </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_5">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_6" class="cell_visible">
+    <div id="cell_6" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">t1a = 20000
+t1b = 30000
+t2a = 10000
+t2b = 50000
+
+odds1a = 0.2
+pp1a = odds1a / (1 + odds1a)
+odds1b = 0.4
+pp1b = odds1b / (1 + odds1b)
+odds2a = 0.8
+pp2a = odds2a / (1 + odds2a)
+odds2b = 1.2
+pp2b = odds2b / (1 + odds2b)
+
+nn1a = int(pp1a*t1a)
+bb1a = float(t1a - nn1a)
+nn1b = int(pp1b*t1b)
+bb1b = float(t1b - nn1b)
+
+nn2a = int(pp2a*t2a)
+bb2a = float(t2a - nn2a)
+nn2b = int(pp2b*t2b)
+bb2b = float(t2b - nn2b)
+
+
+[nn1a, bb1a, nn1b, bb1b, nn2a, bb2a, nn2b, bb2b, pp1a, signif_for_2_way_split(nn1a, bb1a, nn1b, bb1b, nn2a, bb2a, nn2b, bb2b)]&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_6" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_6" onclick="cycle_cell_output_type(6);">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_6">
+                            <div class="cell_output_wrap" id="cell_output_6">
+                                
+                                    <pre class="shrunk">[3333, 16667.0, 8571, 21429.0, 4444, 5556.0, 27272, 22728.0,
+0.166666666666667, 41.36653779781773]</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_nowrap_wrap" id="cell_output_nowrap_6">
+                                    <pre class="shrunk">[3333, 16667.0, 8571, 21429.0, 4444, 5556.0, 27272, 22728.0, 0.166666666666667, 41.36653779781773]</pre>
+                                </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_6">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_7" class="cell_visible">
+    <div id="cell_7" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_7" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_7" onclick="cycle_cell_output_type(7);">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_7">
+                            <div class="cell_output_wrap" id="cell_output_7">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_nowrap_wrap" id="cell_output_nowrap_7">
+                                    
+                                </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_7">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+  
+</div>
+<script>
+    MathJax.Hub.Process();
+</script>
+
+
+<hr class="usercontrol">
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+
+    
+<div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Size1, sans-serif;"></div><div id="feedly-mini" title="feedly Mini tookit"></div></body></html>
